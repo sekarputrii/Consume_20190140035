@@ -15,7 +15,7 @@ function onLoad(){
 
 $("#user").ready(function () {
 	var user = document.getElementById("user")
-	user.innerHTML = `Selamat Datang, ${localStorage.getItem("nama")}`
+	user.innerHTML = `Halo, ${localStorage.getItem("nama")}`
 });
 
 $("#tbl").ready(function () {
@@ -38,8 +38,8 @@ $("#tbl").ready(function () {
 					td4.innerHTML = response[i].stock_barang
 					td5.innerHTML = response[i].agensi
 					td6.innerHTML =`<div class ="justify content-center">
-					<a class="btn btn-warning ms-2" href="edit.html?kode_barang=${response[i].kode_barang}">Edit </a>
-					<button type ="button" class="btn btn-danger ms-2" onclick="del(${response[i].kode_barang});">Delete</button>
+					<a class="btn btn-outline-warning ms-2" href="edit.html?kode_barang=${response[i].kode_barang}">Edit </a>
+					<button type ="button" class="btn btn-outline-danger ms-2" onclick="del(${response[i].kode_barang});">Delete</button>
 					</div>`
 					}
 			}

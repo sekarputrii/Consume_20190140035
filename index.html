@@ -12,15 +12,33 @@
 		<link rel="stylesheet" href="index.js">
 </head>
 <body>
-	<h2 class="alert alert-success">Sign-In</h2>
-	<p style="text-align:center">Welcome</p>
-  <div class="g-signin2" data-onsuccess="onSignIn"></div>
+	<h2 class="alert alert-dark" style="text-align:center">Sign-In</h2>
+	<p style="text-align:center">Halooo Selamat Datang</p>
+	<div class="g-signin2" data-onsuccess="onSignIn"></div>
+
+	<div id="Card">
+		<div id="card-content">
+			
+			<form method="post" class="form">
+				<label for="user-email" style="padding-top: 13px">&nbsp;Email</label>
+				<input id="user-email" class="form-content" type="Email"
+				name="Email" autocomplete="on"required/>
+				<div class="form-border"></div>
+
+				<label for="user-password" style="padding-top: 13px">&nbsp;Password</label>
+				<input id="user-password" class="form-content" type="Password"
+				name="Password" autocomplete="on"required/>
+				<div class="form-border"></div>
+				<input id="submit-btn" type="submit" name="submit" value="LOGIN">
+			</form>
+		</div>
+	</div>
 
 	<div class="data">
 		<p id="name" style="text-align:center"></p>
 		<img class="tengah" id="image" />
 		<p id="email"style="text-align:center"></p>
-		<center><button type="button" class="btn btn-danger" onclick="signOut();">Sign Out</button></center>
+		<button type="button" class="btn btn-danger" onclick="signOut();">Sign Out</button>
 </div>
 
 	<script src="index.js" async defer></script>

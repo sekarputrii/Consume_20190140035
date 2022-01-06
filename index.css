@@ -15,3 +15,53 @@ img.tengah {
 	margin-left: auto;
 	margin-right: auto;
 }
+body{
+	background: url(https://i.pinimg.com/564x/7c/5b/30/7c5b30aa39e45e54ee7d3639c4c389e5.jpg) no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+label{
+	font-family: "Raleway", sans-serif;
+	font-size: 11pt;
+}
+#forgot-pass{
+	font-family: "Raleway", sans-serif;
+	font-size: 10pt;
+	margin-top: 3px;
+	text-align: right;
+}
+#card{
+	background: silver;
+	border-radius: 8px;
+	box-shadow: 1px 2px 8px rgba(0,0,0,0.65);
+	height: 410px;
+	margin: 6rem auto 8.1rem auto;
+	width: 329px;
+}
+#submit-btn{
+	background: -webkit-linear-gradient(right, #B2B1B9);
+	border-radius: 21px;
+	border: none;
+	box-shadow: 0px 1px 8px;
+	cursor: pointer;
+	color: black;
+	font-family: "Raleway SemiBold", sans-serif;
+	height: 42.3px;
+	margin: 2 rem 0;
+	margin-top: 50px;
+	transition: 0.25px;
+	width: 153px;
+}
+#submit-btn:hover{
+	box-shadow: 0px 1px 18px;
+}
+.form-border{
+	height: 1px;
+	width: 100%;
+	background: -webkit-linear-gradient(right, #B2B1B9);
+}
+.form-content{
+	background: #B2B1B9;
+}
