@@ -15,53 +15,26 @@ img.tengah {
 	margin-left: auto;
 	margin-right: auto;
 }
-body{
-	background: url(https://i.pinimg.com/564x/7c/5b/30/7c5b30aa39e45e54ee7d3639c4c389e5.jpg) no-repeat center center fixed;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
+@import "http://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
+Body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background: url(https://i.pinimg.com/564x/79/26/f8/7926f85485117e8d62fa15b631eaee61.jpg) no-repeat;
+    background-size: cover;
 }
-label{
-	font-family: "Raleway", sans-serif;
-	font-size: 11pt;
+.btn{
+    width: 100%;
+    background: none;
+    border: 2px solid #4caf50;
+    color: white;
+    padding: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    margin: 12px 0;
 }
-#forgot-pass{
-	font-family: "Raleway", sans-serif;
-	font-size: 10pt;
-	margin-top: 3px;
-	text-align: right;
+.tr{
+	size: 400px;
 }
-#card{
-	background: silver;
-	border-radius: 8px;
-	box-shadow: 1px 2px 8px rgba(0,0,0,0.65);
-	height: 410px;
-	margin: 6rem auto 8.1rem auto;
-	width: 329px;
-}
-#submit-btn{
-	background: -webkit-linear-gradient(right, #B2B1B9);
-	border-radius: 21px;
-	border: none;
-	box-shadow: 0px 1px 8px;
-	cursor: pointer;
-	color: black;
-	font-family: "Raleway SemiBold", sans-serif;
-	height: 42.3px;
-	margin: 2 rem 0;
-	margin-top: 50px;
-	transition: 0.25px;
-	width: 153px;
-}
-#submit-btn:hover{
-	box-shadow: 0px 1px 18px;
-}
-.form-border{
-	height: 1px;
-	width: 100%;
-	background: -webkit-linear-gradient(right, #B2B1B9);
-}
-.form-content{
-	background: #B2B1B9;
-}
+
+.resizedTextbox {width: 1700px; height: 55px}

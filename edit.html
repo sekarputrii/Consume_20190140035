@@ -10,8 +10,7 @@
     <title>Toko LightStick</title>
 </head>
 <body>
-
-    <nav class="navbar navbar-expand-lg navbar-light bg-light h-100 p-2">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark h-100 p-2">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">LightStick</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -28,9 +27,9 @@
 
     <section>
         <div class="container">
-            <h4>Tambah Barang</h4>
+            <h4 style="text-align: center;">Edit Data Barang</h4>
             <form>
-              <div class="row">
+              <div style="color: white;" class="row">
                   <div class="form-group my-3">
                     <label for="kode_barang" class="form-label">Kode Barang</label>
                     <input type="text" class="form-control" id="kode_barang" placeholder="Masukkan Kode Barang">
@@ -51,13 +50,12 @@
                     <label for="agensi" class="form-label">Agensi</label>
                     <input type="text" class="form-control" id="agensi" placeholder="Masukkan Agensi">
                   </div>
-                  <button type="button" class="btn btn-success ms-2 mt-4 col-5" onclick="saveData();">Simpan Data</button>
-                  <button type="button" class="btn btn-success ms-2 mt-4 col-5" onclick="return window.location.href='./barang.html';">Back</button>
+                  <button type="button" class="btn btn-success ms-2 mt-4 col-5" onclick="saveData(); return window.location.href='./barang.html';">Simpan Data</button>
+                  <button type="button" class="btn btn-danger ms-2 mt-4 col-5" onclick="return window.location.href='./barang.html';">Back</button>
             </div>  
             </form>
             </div>
         </div>
-                    
     </section>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
