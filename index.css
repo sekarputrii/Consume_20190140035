@@ -1,7 +1,9 @@
+/* Untuk tampilan data dengan isi none */
 .data {
 	display: none;
 }
 
+/* Untuk mengatur bentuk dan tapilan button signin */
 .g-signin2 {
 	position: absolute;
 	top: 50%;
@@ -10,11 +12,13 @@
 	margin-left: -50px;
 }
 
+/* Untuk mengatur posisi gambar */
 img.tengah {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
 }
+
 @import "http://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
 Body{
     margin: 0;
@@ -23,6 +27,8 @@ Body{
     background: url(https://i.pinimg.com/564x/79/26/f8/7926f85485117e8d62fa15b631eaee61.jpg) no-repeat;
     background-size: cover;
 }
+
+/* Class btn mengatur tampilan, bentuk, dan posisi button */
 .btn{
     width: 100%;
     background: none;
@@ -33,8 +39,11 @@ Body{
     cursor: pointer;
     margin: 12px 0;
 }
+
+/* Class tr untuk mengatur ukuran dari table row */
 .tr{
 	size: 400px;
 }
 
+/* Class resizedTextbox untuk mengatur lebar dan tinggi dari form search */
 .resizedTextbox {width: 1700px; height: 55px}

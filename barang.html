@@ -1,52 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Tag meta untuk mengatur viewport, google signin -->
     <meta charset="UTF-8">
     <meta name="google-signin-client_id" content="532478157662-k748749dbf0i5f75ogn60aobpt88c0n6.apps.googleusercontent.com">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Tag link untuk mengkoneksikan link2 atau file-file eksternal -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="index.js">
     <title>Toko Lightstick</title>
 </head>
 <body>
-
+    <!-- Tag nav merupakan tag yang berfungsi memberikan navigation bar pada halaman html -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark h-100 p-2">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">LightStick</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav ms-auto" data-onsuccess="onSignIn">
-                <div id="user"></div>
-              <button type="button" class="btn btn-danger ms-2" onclick="signOut();">SignOut</button>
-            </div>
+            <a class="navbar-brand" href="#">LightStick</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav ms-auto" data-onsuccess="onSignIn">
+                    <div id="user"></div>
+                    <button type="button" class="btn btn-danger ms-2" onclick="signOut();">SignOut</button>
+                </div>
           </div>
         </div>
-      </nav>    
-<style>
-    th{color: white;}
-    tr{color: white;}
-</style>
+    </nav>
+    <style> th{color: white;} tr{color: white;}</style>
+
+    <!-- Pada section ini berfungsi untuk membuat/create data -->
     <section>
         <div class="container">
             <div class="row">
                 <div class="col-12">
+                    <!-- Pada tag a ini, tag ini menghubungkan dengan file create.html yang berguna untuk membuat atau menambahkan data -->
                     <a class="btn btn-success ms-2 mt-5" href="create.html">Tambahkan Data Barang</a>
                     <div class="row">
                         <div class="col-4 me-auto mt-3 ms-2">
                             <form class="mb-3">
-                                <div class="form-group d-flex">
-                                    <input type="text" class="resizedTextbox" name="cari" id="cari" placeholder="Mencari Data Barang" class="bg-light form-control me-3"/>
-                                    <button type="button" class="btn btn-primary ms-2 mt-2" onclick="getbyId(cari);">Cari</button>
-                                </div>
+                                <!-- <div class="form-group d-flex">
+                                    <input type="search" class="resizedTextbox" name="cari" id="cari" placeholder="Mencari Data Barang" class="bg-light form-control me-3"/>
+                                    <button type="button" class="btn btn-primary ms-2 mt-2" onClick="carian()">Cari</button>
+                                </div> -->
+                                
                             </form>
                         </div>  
                     </div>
+                    <!-- Pada tag table ini, tag ini berfungsi sebagai memberikan kolom dan tabel pada halaman html -->
                     <table id="tbl" class="table table-striped">
                         <thead>
+                            <!-- Tr =  table row -->
                             <tr>
+                                <!-- Th = table head -->
                                 <th>
                                     Kode Barang
                                 </th>
@@ -73,6 +79,8 @@
         </div>
     </section>
 
+    <!-- Tag script berguna untuk memanggil atau menghubungkan 
+        dengan file-file yang berkaitan dengan Javascript -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="service.js"></script>
@@ -99,6 +107,8 @@
         })
     }
    
+
+// Function ini berfungsi memberikan pop up saat kita ingin menghapus sebuah data
     function del(kode_barang){
         if (window.confirm("Yakin barang ingin dihapus?")===true) {
             axios.delete(`http://localhost:8080/data/barang/${kode_barang}`).then((result) => {
@@ -110,6 +120,7 @@
         }
     }
 
+    // Function ini berfungsi sebagai get Id untuk file barang.html
     function getbyId(kode_barang){
         if (kode_barang=="") {
             axios.getbyId(`http://localhost:8080/data/barang`).then((result) => {
